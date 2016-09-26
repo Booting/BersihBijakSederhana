@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="#14a5b0" />
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="#efefef" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:text="BERSIH BIJAK SEJAHTERA"
+        android:letterSpacing="0.1"
+        android:gravity="center"
+        android:padding="24dp"/>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_centerVertical="true"
+        android:animateLayoutChanges="true">
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+            <RelativeLayout android:id="@+id/relLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1">
+                <TextView android:id="@+id/lblLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:text="Log In"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <View android:id="@+id/viewLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="#b9d53c"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout  android:id="@+id/relRegister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1">
+                <TextView android:id="@+id/lblRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:text="Register"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <View android:id="@+id/viewRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="#b9d53c"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardElevation="2dp"
+            card_view:cardUseCompatPadding="false"
+            android:focusableInTouchMode="true">
+            <LinearLayout android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp">
+
+                <LinearLayout android:id="@+id/linBoxSignIn"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_rectangle"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+                    <EditText android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"/>
+                    <View android:background="#666f6f6f"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+                    <EditText android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:hint="Password"
+                        android:inputType="textPassword"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/linBoxRegister"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_rectangle"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone">
+                    <EditText android:id="@+id/txtEmailR"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"/>
+                    <View android:background="#666f6f6f"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+                    <EditText android:id="@+id/txtPasswordR"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:hint="Password"
+                        android:inputType="textPassword"/>
+                    <View android:background="#666f6f6f"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+                    <EditText android:id="@+id/txtConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@null"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/linErrorAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone">
+                    <ImageView android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_error"
+                        android:layout_marginRight="8dp"/>
+                    <TextView android:id="@+id/lblError"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="You entered an invalid email or password."
+                        android:textColor="#FF5A60"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <Button android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_rectangle_login"
+                    android:text="Log In"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="24dp"/>
+
+                <Button android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_rectangle_login"
+                    android:text="Register"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="24dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <TextView android:id="@+id/lblCopyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="Copyright 2016"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="24dp"/>
+
+</RelativeLayout>
